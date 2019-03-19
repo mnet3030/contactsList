@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+
+
+
+    
+
+    <link rel="stylesheet" href="themes/MyTheme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jquery.mobile-1.4.5.js"></script>
+    <script src="script.js"></script>
+</head>
+
+
+
+
+<style>
+    .custom-btn {
+        display: block;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div data-role="page" id="contactsPage" data-theme="b">
+        <div data-role="header">
+            <a href="#addEdit" id="addButton" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add</a>
+            <h2>Contacts List</h2>
+        </div>
+
+        <ul data-role="listview" id="contactList" data-split-icon="phone" data-split-theme="a" data-inset="true"
+            data-filter="true" data-filter-placeholder="Search contacts...">
+
+        </ul>
+        <div data-role="footer">
+            <h4>Contacts List</h4>
+        </div>
+    </div>
+
+    <div data-role="page" id="contactDetails" data-theme="b">
+        <div data-role="header">
+            <a data-role="button" data-rel="back" data-icon="carat-l">Back</a>
+
+            <h1>Contact Details</h1>
+        </div>
+
+        <div data-role="content" class="ui-content" style="text-align: center;">
+            <img id="detailImage" alt="User" height="120" width="120" class="custom-btn">
+            <div style="text-align:center">
+                <a data-role="button" id="callButton" data-icon="phone" data-inline="true"> Call </a>
+                <a data-role="button" id="editButton" data-icon="edit" data-inline="true"> Edit </a>
+                <a data-role="button" id="deleteButton" href="#confirmDelete" data-icon="delete" data-inline="true"
+                    data-rel="dialog"> Delete </a>
+            </div>
+        </div>
+
+        <div data-role="footer">
+
+            <h1>Contact Details</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="addEdit" data-theme="b">
+        <div data-role="header">
+            <a data-role="button" data-rel="back" data-icon="carat-l">Back</a>
+            <h1>Add New Contact</h1>
+        </div>
+
+        <div data-role="content" class="ui-content">
+            <form id="mainForm">
+                <div data-role="ui-field-contain">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="namee" value="" placeholder="Your name" required />
+                </div>
+                <div data-role="ui-field-contain">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" pattern="^01[012][0-9]{8}$" data-clear-btn="true"
+                        name="phone" id="tel" value="" placeholder="Your Phone (etisalat Or Vodafon Or Mobinil)">
+                </div>
+                <div data-role="ui-field-contain">
+                    <label for="email">Email:</label>
+                    <input type="email" data-clear-btn="true" name="email" id="email" value=""
+                        placeholder="Your e-mail">
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="flip-checkbox-2">Gender:</label>
+                    <input type="checkbox" data-role="flipswitch" name="flip-checkbox-2" id="gender"
+                        data-on-text="female" data-off-text="male" data-wrapper-class="custom-label-flipswitch">
+                </div>
+
+                <div data-role="fieldcontain">
+                    <label for="flip-checkbox-2">Image:</label>
+                    <input type="file" name="flip-checkbox-2" id="fileImage">
+                    <div style="text-align: center; margin-top: 50px">
+                        <img src="no-image-icon-hi.png" id="prevImage" style="width: 150px; height: 150px;">
+                    </div>
+                </div>
+
+                <div style="text-align:center">
+                    <button type="submit" id="addSaveButton" data-icon="check" data-inline="true">Add</button>
+                    <a data-role="button" data-icon="forbidden" data-inline="true" data-rel="back">cancel</a>
+                </div>
+            </form>
+        </div>
+
+        <div data-role="footer">
+            <h1>User</h1>
+        </div>
+    </div>
+
+    <section data-role="page" id="confirmDelete" data-theme="b">
+        <br>
+        <label>&nbsp;&nbsp;Delete Contact?</label>
+
+        <div data-role="controlgroup" data-type="horizontal" style="text-align:center">
+            <a href="" data-role="button" data-rel="back">Cancel</a>
+            <button data-role="button" data-rel="back" id="confirmDeleteButton">Delete</button>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

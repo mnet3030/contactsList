@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+  <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+  .custom-btn {
+    display:block;
+    margin:auto;
+  }
+  </style>
+</head>
+
+
+
+<body>
+  <div data-role = "page" id = "detail" >
+    <div data-role = "header">
+      <a data-role="button" data-rel="back" data-icon="carat-l">Back</a>
+
+      <h1>User Name</h1>
+    </div>
+
+    <div data-role = "main" class = "ui-content">
+      <img src="user.png" alt="User" height="120" width="120" class="custom-btn">
+      <div style="text-align:center">
+      <a data-role="button" data-icon="phone" data-inline="true"> Call </a>
+      <a data-role="button" data-icon="edit" data-inline="true"> Edit </a>
+      <a data-role="button" data-icon="delete" data-inline="true"> Delete </a>
+    </div>
+    </div>
+
+    <div data-role = "footer">
+
+      <h1>Contact List</h1>
+    </div>
+  </div>
+</body>
+</html>
